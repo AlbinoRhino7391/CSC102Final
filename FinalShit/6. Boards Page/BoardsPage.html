@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ichiraku Ramen Shop</title>
+    <style>
+/* Style the body of the page*/
+body {
+  background-image: url('technoBG.gif') ;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: center;
+  
+  background-position: center;
+  background-size: 100% 100%;
+  color: white;
+  font-size: 40px;
+}
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+</style>
+    </style>
+</head>
+<body>
+         
+    <!--This is to create the overlaying navigation pane-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="..\Index.HTML">Home</a>  
+          <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+          <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+          <a href="..\3. MenmaPage\Menma.html">Menma</a>
+          <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+          <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+          <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+        </div>
+      </div>
+      <!--Creates the Menu Button-->
+      <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776; MENU</span>
+
+        <!--Internal JS to open and close Nav menu-->
+      <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+
+<!--creates a header-->
+<div class="header">
+    <h1>Eric D. Phelps</h1>
+    <p>Major: Video Game Programming</p>
+  </div>
+    
+<H1 style="color: White; font-style: oblique;text-align: center; font-size: x-large;">GAME PROGRAMMING DEGREE OBJECTIVES</H1>
+
+<ol style= "line-height: 200%; font-size: large; color: white; text-align: center;">
+    <li>Implement multiple completed games, including 3D games, using common tools, languages, and software for web,
+        console, PC, or mobile platforms.
+    </li>
+  
+    <li>Design, develop, and implement the architecture and infrastructure needed to support a complete game project</li>
+  
+    <li>Implement and analyze fundamental data structures and algorithms associated with game applications supporting
+        gameplay mechanics.</li>
+    <li>. Use software development processes to analyze a project problem, and to design, build, and test a corresponding software
+        solution.</li>
+
+    <li>Demonstrate development skills using multiple programming languages, development environments, and platforms,
+including advanced and/or experimental topics in game programming.</li>
+
+    <li>Establish collaboration, mentorship, and professional leadership skills by working with other disciplines to deliver highly
+        polished and completed projects.</li>
+  </ol>
+
+<!--Creates the Footer-->
+<div class="footer">
+    <p>University of Advancing Technology</p>
+    <p>2520 N 109th Ave, Avondale AZ</p>
+    <p>eriphelp@uat.edu</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menma Recipe</title>
+    <!--Style in the head is for implementinf Internal CSS-->
+    <style> 
+body {
+background-image: radial-gradient(white, lightgreen,green);
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: center;
+  background-image: url('HiddenLeafSymbol.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+  color: white;
+  font-size: 40px;
+}
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the table and the data*/
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color:lightgreen;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+/*Styles the recipe image*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+   <!--This is to create the overlaying navigation pane-->
+   <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="..\Index.HTML">Home</a>  
+          <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+          <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+          <a href="..\3. MenmaPage\Menma.html">Menma</a>
+          <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+          <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+          <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+    </div>
+  </div>
+  <!--Creates the Menu Button-->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+    <!--Internal JS to open and close Nav menu-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+  <img src="Menma-pickled-bamboo.jpg" alt="Menma-pickled-bamboo.jpg" height="400" width="400">
+<!--Typing style within a line of code is Inline CSS-->
+<H1 style="color: black; font-style: oblique;text-align: center;">Menma</H1>
+
+<H3 style= "font-style:oblique; text-align: center;">Pickled Bamboo Shoots</H3>
+<H4 style= "font-style:oblique; text-align: center;">Needed to make Ichiraku Ramen</H4>
+<h2 style="color: black; font-style: italic;">What you will need:</h2>
+<!--This is where you start crafting your table-->
+<table style="width: 50%;">
+  <!--tr is a table row-->
+  <tr>
+    <!--th is a table header-->
+    <th>Ingredient</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <!--td is for table data or table cell-->
+    <td>Bamboo Shoot Strips</td>
+    <td>1 Cup</td> 
+  </tr>
+  <tr>
+    <td>Chasu Marinade (see chasu pork recipe)</td>
+    <td>1/2 Cup</td>
+  </tr>
+  <tr>
+    <td>Mirin</td>
+    <td>1/2 Cup</td>
+  </tr>
+  <tr>
+    <td>Dashi Stock (See Recipe) </td>
+    <td>1 Cup</td>
+  </tr>
+    
+</table>
+<!--There are definately more efficient ways such as tbody and thead, but for the objectives of this assignment, i figured thourough would be best.-->
+
+<h2 style="color: black; font-style: italic;"> Directions:</h2>
+
+<!--ol is for ordered list, li is for list items-->
+<ol style= "line-height: 200%; font-size: large;";>
+  <li>In a medium pot over medium heat, combine all the ingredients and bring to a boil. Cover, reduce heat to low, and let simmer for 30 minutes to soften the bamboo.
+  </li>
+
+  <li>Remove the pot from the heat and let the bamboo cool in the liquid. Pour in a sturdy zip-lock bag and Refrigerate overnight. Strain when ready to use.
+  </li>
+
+</ol>
+
+<h3>Anime appeared in:</h3>
+<ul style="line-height: 200%">
+  <li>Naruto</li>
+  <li>Dragon Ball Super</li>
+  <li>Naruto: Shippuden</li>
+</ul>
+
+<!--Creates the Footer-->
+<div class="footer">
+  <p>University of Advancing Technology</p>
+  <p>2520 N 109th Ave, Avondale AZ</p>
+  <p>eriphelp@uat.edu</p>
+</div>
+    
+</body>
+</html>

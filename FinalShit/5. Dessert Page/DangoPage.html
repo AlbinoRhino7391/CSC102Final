@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dango Recipe</title>
+    <!--Style in the head is for implementinf Internal CSS-->
+    <style> 
+body {
+background-image: radial-gradient(pink, plum, white, lightgreen);
+}
+
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the table and data*/
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color:lightgreen;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+/*Styles the recipe image*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+
+  <!--This is to create the overlaying navigation pane-->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="..\Index.HTML">Home</a>  
+      <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+      <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+      <a href="..\3. MenmaPage\Menma.html">Menma</a>
+      <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+      <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+      <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+    </div>
+  </div>
+  <!--Creates the Menu Button-->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+    <!--Internal JS to open and close Nav menu-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+  <img src="hanamiDango.jfif" alt="hanamiDango.jpg">
+<!--Typing style within a line of code is Inline CSS-->
+<H1 style="color: black; font-style: oblique;text-align: center;">HANAMI DANGO</H1>
+<H3 style= "font-style:oblique; text-align: center;">Tricolored Rice Flour Dumplings</H3>
+
+<h2 style="color: black; font-style: italic;">What you will need:</h2>
+<!--This is where you start crafting your table-->
+<table style="width: 50%;">
+  <!--tr is a table row-->
+  <tr>
+    <!--th is a table header-->
+    <th>Ingredient</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <!--td is for table data or table cell-->
+    <td>Mochicko Glutinous Rice Flour</td>
+    <td>1/2 Cup</td> 
+  </tr>
+  <tr>
+    <td>Hot water</td>
+    <td>1/4 + a dash</td>
+  </tr>
+  <tr>
+    <td>Joshinko Non-Glutinous Rice Flour </td>
+    <td>1/2 Cup</td>
+  </tr><tr>
+    <td>Sugar</td>
+    <td>2 Tablespoon</td>
+  </tr><tr>
+    <td>Matcha Powder</td>
+    <td>1/2 teaspoon</td>
+  </tr><tr>
+    <td>Red Food Coloring</td>
+    <td>1-2 drops</td>
+  </tr><tr>
+    <td>Wooden Skewers</td>
+    <td>6</td>
+  </tr>
+</table>
+<!--There are definately more efficient ways such as tbody and thead, but for the objectives of this assignment, i figured thourough would be best.-->
+
+<h2 style="color: black; font-style: italic;"> Directions:</h2>
+
+<!--ol is for ordered list, li is for list items-->
+<ol style= "line-height: 200%;">
+  <li>Set a medium pot filled 3/4 with water to boil over medium-high heat.</li>
+  <li>In a medium mixing bowl, stir together Mochicko and hot water until rice flour is dissolved. Add the Joshinkoand sugar and stir until well combined. Gradually stir in dashes of hot water as needed(up to another 1/4 Cup) until texture of dough is soft.</li>
+  <li>Knead the dough to make it very smooth and divide it into 3 equal segments. Place the segments into 3 seperate bowls and cover with plastic wrap to keep dough from getting dry.</li>
+  <li>Place the matcha powder in a small bowl and add a dash of hot water. Mix until you create a paste. using a toothpick, add small amounts of the paste to one of the dough balls, kneading it until you get a smooth green color.Wash hands after as to not transfer color to the other dough balls.</li>
+  <li>Add one drop of red food coloring to a bowl of dough, knead it well to incorporate it evenly. Again wash your hands afterwards as to keep from transferring colors to other dough.</li>
+  <li>Fill a large bowl half way with ice water.</li>
+  <li>Remove the plain dough from its bowl, roll into a log. Divide the log into 6 equal bits. Roll each bit into a small ball and lower them into the boiling water. Once they float to the top, let them boil for an additional 2 minutes. Once done, scoop out with a slotted spoon and transfer to the ice bath.</li>
+  <li>Repeat step 7 with the red dough, then the green dough. Once finished you can discard the boiling water.</li>
+  <li>Once all dango bits have cooled, thread them onto a skewer with: green on bottom, white in the middle, and pink on top. They are now ready to serve.</li>
+</ol>
+
+<h3>Anime appeared in:</h3>
+<ul style="line-height: 200%">
+  <li>Clannad</li>
+  <li>Touken Ranbu: Hanamaru</li>
+  <li>Naruto: Shippuden</li>
+</ul>
+
+<!--Creates the Footer-->
+<div class="footer">
+  <p>University of Advancing Technology</p>
+  <p>2520 N 109th Ave, Avondale AZ</p>
+  <p>eriphelp@uat.edu</p>
+</div>
+    
+</body>
+</html>

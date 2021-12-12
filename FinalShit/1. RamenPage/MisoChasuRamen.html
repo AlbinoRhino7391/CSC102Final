@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miso Chasu Ramen Recipe</title>
+    <!--Style in the head is for implementinf Internal CSS-->
+    <style> 
+/* Style the body of the page*/
+body {
+background-image: radial-gradient(rgb(146, 84, 13), orange, rgb(119, 88, 42));
+}
+
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the table and info*/
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color:rgb(252, 184, 58);
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+/*Styles the image for each recipe*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+  <!--This is to create the overlaying navigation pane-->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="..\Index.HTML">Home</a>  
+          <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+          <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+          <a href="..\3. MenmaPage\Menma.html">Menma</a>
+          <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+          <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+          <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+    </div>
+  </div>
+  <!--Creates the Menu Button-->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+    <!--Internal JS to open and close Nav menu-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+  <img src="Ramen.jpg" alt="Ramen.jpg" height="400" width="400">
+<!--Typing style within a line of code is Inline CSS-->
+<H1 style="color: black; font-style: oblique;text-align: center;">Miso Chasu Ramen</H1>
+
+<H3 style= "font-style:oblique; text-align: center;">Noodle Soup with Braised Pork and Miso Broth</H3>
+<H4 style= "font-style:oblique; text-align: center;">Serves 2 people</H4>
+<h2 style="color: black; font-style: italic;">What you will need:</h2>
+<!--This is where you start crafting your table-->
+<table style="width: 50%;">
+  <!--tr is a table row-->
+  <tr>
+    <!--th is a table header-->
+    <th>Ingredient</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <!--td is for table data or table cell-->
+    <td>Sesame Oil</td>
+    <td>1 Tablespoon</td> 
+  </tr>
+  <tr>
+    <td>Minced Onion</td>
+    <td>1/4 large Onion</td>
+  </tr>
+  <tr>
+    <td>Ginger</td>
+    <td>1 inch, freshly peeled and minced</td>
+  </tr>
+  <tr>
+    <td>Minced Garlic </td>
+    <td>2 Teaspoons</td>
+  </tr>
+  <tr>
+    <td>Ground Pork</td>
+    <td>1/4 Pound</td>
+  </tr>
+  <tr>
+    <td>Miso Paste (red or white)</td>
+    <td>3 Tablespoon</td>
+  </tr>
+  <tr>
+    <td>Chicken Stock</td>
+    <td>2 Cup</td>
+  </tr>
+  <tr>
+    <td>Dashi Stock</td>
+    <td>1 Cup</td>
+  </tr>
+  <tr>
+    <td>Mirin</td>
+    <td>2 Tablespoon</td>
+  </tr>
+  <tr>
+    <td>Green Onions</td>
+    <td>4 (discard dark green and roots)</td>
+  </tr>
+  <tr>
+    <td>Salt and White Pepper</td>
+    <td>add to taste</td>
+  </tr>
+  <tr>
+    <td>Ramen or Chuka Soba Noodles</td>
+    <td>6 Ounces</td>
+  </tr>
+  <tr>
+    <td>Chasu Pork (Please see page)</td>
+    <td>10-14 Slices</td>
+  </tr>
+  <tr>
+    <td>Menma (Please see page)</td>
+    <td>1 Cup</td>
+  </tr>
+  <tr>
+    <td>Ajitsuke Tamago (Please see page)</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Narutomaki Kamabuko Fishcake</td>
+    <td>4 Slices</td>
+  </tr>
+  <tr>
+    <td>Roasted Nori</td>
+    <td>6 Sheets</td>
+  </tr>
+</table>
+<!--There are definately more efficient ways such as tbody and thead, but for the objectives of this assignment, i figured thourough would be best.-->
+
+<h2 style="color: black; font-style: italic;"> Directions:</h2>
+
+<!--ol is for ordered list, li is for list items-->
+<ol style= "line-height: 200%; font-size: large;";>
+  <li>Heat the sesame oil in a large pot over medium-low heat and add the onion, ginger, and garlic. Cook until just tender and fragrant, roughly 10 minutes. Add the ground pork, breaking the meat 
+      with a wooden spoon. Cook intil the meat is no longer pink, roughly 5 minutes, then stir in the miso paste until evenly distributed. Pour in the chicken stock, dashi stock, and mirin. Add the 
+      green onion and increase the heat to medium. Bring to a simmer, the reduce the heat back down to medium-low. Simmer for 10 minutes, skimming off foam as needed.
+  </li>
+
+  <li>Strain the soup through a fine mesh strainer into a large pitcher or pot, reserving the solids for rice or ramen toppings if desired. Season with salt and white pepper if desired.</li>
+
+  <li>Bring a large pot of water to a boil and stir in the noodles. Cook according to the package directions, usually about 3 minutes, until the noodles are just tender and cooked all the way through.
+      Drain but dont rinse and split into 2 serving bowls. Spoon broth over the noodles, then top each with 5 to 7 overlapping slices of chasu, menma, chopped green onion, 2 slices of narutomaki, 1 ajitsuke cut in half, and 3 sheets of nori.
+  </li>
+</ol>
+
+<h3>Anime appeared in:</h3>
+<ul style="line-height: 200%" >
+  <li>Naruto</li>
+  <li>Dragon Ball Super</li>
+  <li>Naruto: Shippuden</li>
+</ul>
+
+<!--Creates the Footer-->
+<div class="footer">
+  <p>University of Advancing Technology</p>
+  <p>2520 N 109th Ave, Avondale AZ</p>
+  <p>eriphelp@uat.edu</p>
+</div>
+    
+</body>
+</html>

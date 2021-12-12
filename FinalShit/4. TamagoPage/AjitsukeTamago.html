@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajitsuke Recipe</title>
+    <!--Style in the head is for implementinf Internal CSS-->
+    <style> 
+body {
+background-image: radial-gradient(orange, yellow,white);
+}
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+
+/*Styles the tables and data*/
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color:orange;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+/*Stlyes the recipe image*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+</head>
+<body>
+
+  <!--This is to create the overlaying navigation pane-->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="..\Index.HTML">Home</a>  
+      <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+      <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+      <a href="..\3. MenmaPage\Menma.html">Menma</a>
+      <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+      <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+      <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+    </div>
+  </div>
+  <!--Creates the Menu Button-->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+    <!--Internal JS to open and close Nav menu-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+  <img src="Ajitsuke ramen eggs.jpg" alt="Ajitsuke ramen eggs.jpg" height="400" width="400">
+<!--Typing style within a line of code is Inline CSS-->
+<H1 style="color: black; font-style: oblique;text-align: center;">Ajitsuke Tamago</H1>
+
+<H3 style= "font-style:oblique; text-align: center;">Marinated Soft-Boiled Eggs</H3>
+<H4 style= "font-style:oblique; text-align: center;">Needed to make Ichiraku Ramen or Use as a Snack</H4>
+<h2 style="color: black; font-style: italic;">What you will need:</h2>
+<!--This is where you start crafting your table-->
+<table style="width: 50%;">
+  <!--tr is a table row-->
+  <tr>
+    <!--th is a table header-->
+    <th>Ingredient</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <!--td is for table data or table cell-->
+    <td>Large Eggs</td>
+    <td>2 </td> 
+  </tr>
+  <tr>
+    <td>Chasu Marinade (see chasu pork recipe)</td>
+    <td>1/2 Cup</td>
+  </tr>
+ 
+    
+</table>
+<!--There are definately more efficient ways such as tbody and thead, but for the objectives of this assignment, i figured thourough would be best.-->
+
+<h2 style="color: black; font-style: italic;"> Directions:</h2>
+
+<!--ol is for ordered list, li is for list items-->
+<ol style= "line-height: 200%; font-size: large;";>
+  <li>Fill a pot with enough water to cover the eggs. (*DO NOT PUT THE EGGS IN THE POT AT THIS TIME) Bring the water to a boil then reduce the heat to medium. Lower the eggs into the water
+    and gently stir them around for 2 minutes, then let them cook for an additional 4 minutes. While the eggs are cooking, prepare an ice bath by filling a medium bowl with cold water and
+    ice cubes. Once the eggs are cooked, quickly remove them and gently place them into the ice bath to cool.
+  </li>
+
+  <li>Once cool, gently tap and roll the eggs on the counter-top to crack the shells all over. Carefully peel away the shells, then place the eggs into a zip-lock bag. Pour the marinade over
+    the eggs and seal the bag. Refrigerate over night. WHen ready to serve, remove the eggs from the bag and slice in half lenghtwise; the white will be solid and the yolks will be runny.
+  </li>
+
+</ol>
+
+<h3>Anime appeared in:</h3>
+<ul style="line-height: 200%">
+  <li>Naruto</li>
+  <li>Dragon Ball Super</li>
+  <li>Naruto: Shippuden</li>
+</ul>
+
+<!--Creates the Footer-->
+<div class="footer">
+  <p>University of Advancing Technology</p>
+  <p>2520 N 109th Ave, Avondale AZ</p>
+  <p>eriphelp@uat.edu</p>
+</div>
+    
+</body>
+</html>

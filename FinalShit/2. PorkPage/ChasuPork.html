@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--Eric Phelps-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasu Pork Recipe</title>
+    <!--Style in the head is for implementinf Internal CSS-->
+    <style> 
+body {
+background-image: radial-gradient(white, pink, red);
+}
+
+/* Style the Overlay for Nav Pane */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*Styles the table and data*/
+table {
+  font-family: arial, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color:pink;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+/*Styles the recipe image*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styles the fixed Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+
+  <!--This is to create the overlaying navigation pane-->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="..\Index.HTML">Home</a>  
+          <a href="..\1. RamenPage\MisoChasuRamen.html">Ramen</a>
+          <a href="..\2. PorkPage\ChasuPork.html">Chasu Pork</a>
+          <a href="..\3. MenmaPage\Menma.html">Menma</a>
+          <a href="..\4. TamagoPage\AjitsukeTamago.html">Ajitsuke Tamago</a>
+          <a href="..\5. Dessert Page\DangoPage.html">Dessert</a>
+          <a href="..\6. Boards Page\BoardsPage.html">Boards</a>
+
+    </div>
+  </div>
+  <!--Creates the Menu Button-->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+    <!--Internal JS to open and close Nav menu-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+  <img src="Chashu-pork.jpg" alt="Chashu-pork.jpg" height="400" width="400">
+<!--Typing style within a line of code is Inline CSS-->
+<H1 style="color: black; font-style: oblique;text-align: center;">Chasu Pork</H1>
+
+<H3 style= "font-style:oblique; text-align: center;">Japanese Braised Pork</H3>
+<H4 style= "font-style:oblique; text-align: center;">Needed to make Ichiraku Ramen</H4>
+<h2 style="color: black; font-style: italic;">What you will need:</h2>
+<!--This is where you start crafting your table-->
+<table style="width: 50%;">
+  <!--tr is a table row-->
+  <tr>
+    <!--th is a table header-->
+    <th>Ingredient</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <!--td is for table data or table cell-->
+    <td>Sake Rice Wine</td>
+    <td>1 Cup</td> 
+  </tr>
+  <tr>
+    <td>Soy Sauce</td>
+    <td>1 Cup</td>
+  </tr>
+  <tr>
+    <td>Dark Brown Sugar</td>
+    <td>1/2 Cup</td>
+  </tr>
+  <tr>
+    <td>Leek </td>
+    <td>1 cut into 2 inch segments (Discard dark parts and roots)</td>
+  </tr>
+  <tr>
+    <td>Ginger</td>
+    <td>2 inch Piece unpeeled and thinly sliced</td>
+  </tr>
+  <tr>
+    <td>Skinless Pork Belly</td>
+    <td>1 Pound</td>
+  </tr>
+  <tr>
+    <td>Vegetable Oil</td>
+    <td>1 Tablespoon</td>
+  </tr>
+  
+</table>
+<!--There are definately more efficient ways such as tbody and thead, but for the objectives of this assignment, i figured thourough would be best.-->
+
+<h2 style="color: black; font-style: italic;"> Directions:</h2>
+
+<!--ol is for ordered list, li is for list items-->
+<ol style= "line-height: 200%; font-size: large;";>
+  <li>In a large, deep pot over a high-heat combine 2 cups of water with the sake, soy sauce, sugar, leek, and ginger. Roll the pork belly tightly into a log and secure very snuggly with 
+      bakers twine in at least 5 equally spaced spots. Place a large skillet over high-heat and add the oil. Once the pan is very hot, sear the rolled meat well on all sides, 2-3 minutes 
+      per side. Transfer the meat to the deep pot and stir to coat with the marinade. Bring the marinade to a boil, skim off any foam, then reduce the heat to medium-low. Cover the pot and 
+      cook for 2 hours, rotating the meat every 20 minutes and skimming off the foam as needed.
+  </li>
+
+  <li>Remove the pot from the heat and let the meat cool in the marinade. Remove the meat from the pot and place in a sturdy zip-lock bag. Strain and reserve the marinating liquid, pouring enough
+      into the bag to cover the meat. Refrigerate overnight. The leftover marinade can be used to make the menma and ajitsuke tamago ramen toppings which also marinade overnight.
+  </li>
+
+  <li>On the following day, preheat your oven to broil and line a baking sheet with aluminium foil. Remove the meat from the bag and discard any solidified fat bits. Cut the strings, and slice
+      the meat into 1/4 inch thick slices. P;ace the slices on the baking sheet and broil for 2-3 minutes, just long enough to crisp the meat. Serve on top of ramen.
+  </li>
+</ol>
+
+<h3>Anime appeared in:</h3>
+<ul style="line-height: 200%">
+  <li>Naruto</li>
+  <li>Dragon Ball Super</li>
+  <li>Naruto: Shippuden</li>
+</ul>
+
+<!--Creates the Footer-->
+<div class="footer">
+  <p>University of Advancing Technology</p>
+  <p>2520 N 109th Ave, Avondale AZ</p>
+  <p>eriphelp@uat.edu</p>
+</div>
+    
+</body>
+</html>
